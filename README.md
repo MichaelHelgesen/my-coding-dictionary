@@ -1,2 +1,2 @@
 # my-coding-dictionary
-Coding terminology in my own words as I understand it. So please do not trust! :poop: :skull:
+Coding terminology as I understand it, in my own words. So please do not trust! :poop: :skull:
