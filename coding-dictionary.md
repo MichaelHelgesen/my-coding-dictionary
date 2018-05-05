@@ -1,3 +1,55 @@
+**else:** An "else" clause in a "if" statement. Contains code that will run if the boolean in the "if" statement is false. 
+
+**Flow control:** The ability to control the flow of our program using for example a series of if statements and conditions.
+
+**Nesting:** Indentation or tabbing of nested code to improve readability.
+
+**Code block:** A place where we can put as many lines of code that we want: if statements, functions, loops to name a few.  
+
+**if:** The keyword that initialise the if statement.
+
+**If (if/else) statements (conditional statements):** In the "if" statement, boolean conditions defined in the parentheses determine what code will run in the code block (or if it will run at all). Depending on whether the boolean is true or false, JavaScript will execute the code in the curly braces (code block).
+
+    if (isFreezing) {
+        console.log("It is freezing outside!"); // Will run if boolean is true.
+    } 
+
+You can expand the "if" statement by using "else" and/or "else if". 
+
+    if (isFreezing <= -1) {
+        console.log("It is freezing outside!"); // more than -1
+    } else if (isFreezing > 0) {
+        console.log("It's not freezing"); // If more than 0.
+    } else {
+        console.log("it's 0 degrees celcius."); // If none above.
+    };
+
+**Comparison operators (booleans):** There are six main comparison operators in JS:
+    
+    // 1. Equal: ===
+    "Michael" === "Michael" // True
+    "Michael" === "Peter" // False
+
+    // 2. Not equal !==
+    "Michael" !== 32 // True
+    38 !== 38 // False
+
+    // 3. Less than <
+    5 < 10 // True
+    5 < 5 // False
+
+    // 4. Less than or equal to <=
+    5 <= 5 // True
+    5 <= 6 // False
+
+    // 5. Greater than >
+    5 > 2 // True
+    5 > 10 // False
+
+    // 6. Greater than or equal to >=
+    10 >= 10 // True
+    100 >= 100 // False
+
 **Comments:** Text to insert into the program, that gets ignored by the computer. Used to describe various things about the code to the human reader. 
 
 Line comment is initialised with to forward slashes:
