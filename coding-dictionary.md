@@ -1,4 +1,37 @@
-**else:** An "else" clause in a "if" statement. Contains code that will run if the boolean in the "if" statement is false. 
+**Operator:** Constructs which behave generally like functions. Commons examples are arithmetic (+, -), comparison (>, <) and logical operations (&&, ||).
+
+**Operand:** An operand is the object that is being worked on by an operation. 
+
+    let x = 3; // x is an operand
+    x = x + 3; // An operation of the operand
+
+**Logical or operator:** A statement that returns true if one of the operands (booleans) to the left and right of the logical "or" operator (||) is true. 
+
+    var num = 7;
+
+    if (num > 10 || num < 5) { 
+        return "Yes"; // True
+    } 
+
+**Logical and operator (&&):** A statement that returns true if the operands (booleans) to the left and right of the logical "and" operator (&&) is true. 
+
+    var num = 7;
+
+    if (num > 5 && num < 10) {
+        return "Yes"; // True
+    } 
+
+**Else if** An "else if" clause in a "if" statement. Contains code that will run if the boolean in the "else if" parentheses is the first truth in the "if/else" statement.
+
+    if (true) {
+        // I run
+    } else if (true) {
+        // I don't run
+    } else {
+        // I don't run
+    };
+
+**Else:** An "else" clause in a "if" statement. Contains code that will run if the boolean in the "if" statement is false. 
 
 **Flow control:** The ability to control the flow of our program using for example a series of if statements and conditions.
 
@@ -6,7 +39,7 @@
 
 **Code block:** A place where we can put as many lines of code that we want: if statements, functions, loops to name a few.  
 
-**if:** The keyword that initialise the if statement.
+**If:** The keyword that initialise the if statement.
 
 **If (if/else) statements (conditional statements):** In the "if" statement, boolean conditions defined in the parentheses determine what code will run in the code block (or if it will run at all). Depending on whether the boolean is true or false, JavaScript will execute the code in the curly braces (code block).
 
@@ -22,6 +55,32 @@ You can expand the "if" statement by using "else" and/or "else if".
         console.log("It's not freezing"); // If more than 0.
     } else {
         console.log("it's 0 degrees celcius."); // If none above.
+    };
+
+Only one codeblock will ever run, so it's important to pay attention to the order. The code is read from top to bottom, and stops at the first true condition:
+
+    if (true) {
+        // I run
+    } else if (true) {
+        // I don't run
+    } else {
+        // I don't run
+    };
+
+    if (false) {
+        // I don't run
+    } else if (true) {
+        // I run
+    } else {
+        // I don't run
+    };
+
+    if (false) {
+        // I don't run
+    } else if (false) {
+        // I don't run
+    } else {
+        // I run
     };
 
 **Comparison operators (booleans):** There are six main comparison operators in JS:
