@@ -1,3 +1,29 @@
+**Scope diagram:** A diagram describing / depicting the scope hierarchy in the program.
+
+**Scope hierarchy:** Pointing to the depth of the scopes used in a program. The context in which the variable is defined and used and how they relate to each other in the hierarchy.
+
+In a scope you can access variables defined in that scope, or in any parent/ancestor scope.
+
+**Local scope:** Variables defined inside code blocks.
+
+**Global scope:** Global scope contains all variables defined outside all code blocks. 
+
+**Lexical Scope (static scope):** The idea that a variable defined in one part of the program, may not be accessible everywhere else. The context in which the variable is defined and used comes in to play. So we need to pay attention to the code blocks in our script when talking about scope.
+
+    let varOne = 'varOne'; // Global scope
+
+    if (true) {
+        console.log(varOne); // Local scope
+        let varTwo = 'varTwo';
+        console.log(varTwo);
+    }
+
+    console.log(varTwo); //Reference error: not defined in global scope.   
+
+**Scope:** Determines the accessibility (visibility) of variables. Where in the program are the variables defined.
+
+In a scope you can access variables defined in that scope, or in any parent/ancestor scope.
+
 **Operator:** Constructs which behave generally like functions. Commons examples are arithmetic (+, -), comparison (>, <) and logical operations (&&, ||).
 
 **Operand:** An operand is the object that is being worked on by an operation. 
