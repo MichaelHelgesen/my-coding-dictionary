@@ -1,4 +1,50 @@
+**Return statement:** The reserved keyword "return". Can only be used a single time in our functions.
+
+**Return value:** Returns the result of the code in the function.
+
+Function: The output value / result of the function.
+
+**Parameters:** The names listed in the function definition.
+
+**Arguments:** The _real_ values that get passed to and recieved by the function. 
+
+**Function:** Put simply: A program inside the program. This sub program can be executed as many times as we want. It is also the keyword we need to use, followed by a set of parentheses and curly braces.
+
+    let greetUser = function () {
+        console.log('Welcome user!');
+    };
+
+At this point the function is defined. To run / call it, we have to call it by reference it by name, followed by the function call syntax; An opening and closing parethesis after the name:
+
+    greetUser();
+
+There are three important parts to a function:
+
+1. Input (argument):
+The _real_ values that get passed to and recieved by the function. 
+2. Code:
+Code that does something meaningful.
+3. Output (return value): Returns the result of the function. Can only be used once in our function.
+
+        let square = function (num) { // Defined function with parameter.
+            let result = num * num; // Code.
+            return result; // Return value (output).
+        }
+
+        let value = square(3); // Function call with argument (input) "3"
+
+**Leaked global:** If we assign a value to a variable that is not declared anywhere in the local or parent scope, it automatically gets declared in the global scope. But we can't reference it because it has not been explicitly declared with a name. 
+
+To avoid it, just make sure that the variable is declared somewhere.
+
+**Variable shadowing:** When a variable in a local scope uses it's value instead of the value in a parent scope with the same name. The local variable value is shadowing over the parents, hiding it from existens.
+
 **Scope diagram:** A diagram describing / depicting the scope hierarchy in the program.
+
+    // Global scope (varOne)
+        // Local Scope (varTwo)
+            // Local Scope (varFour)
+        // Local Scope (varThree)
 
 **Scope hierarchy:** Pointing to the depth of the scopes used in a program. The context in which the variable is defined and used and how they relate to each other in the hierarchy.
 
@@ -6,15 +52,19 @@ In a scope you can access variables defined in that scope, or in any parent/ance
 
 **Local scope:** Variables defined inside code blocks.
 
+If we assign a value to a variable that is not declared anywhere in the local or parent scope, it automatically gets declared in the global scope.
+
 **Global scope:** Global scope contains all variables defined outside all code blocks. 
+
+If we assign a value to a variable that is not declared anywhere in the local or parent scope, it automatically gets declared in the global scope.  
 
 **Lexical Scope (static scope):** The idea that a variable defined in one part of the program, may not be accessible everywhere else. The context in which the variable is defined and used comes in to play. So we need to pay attention to the code blocks in our script when talking about scope.
 
     let varOne = 'varOne'; // Global scope
 
     if (true) {
-        console.log(varOne); // Local scope
-        let varTwo = 'varTwo';
+        console.log(varOne); // Avaliable due to parent/ancector
+        let varTwo = 'varTwo'; // Local scope
         console.log(varTwo);
     }
 
@@ -219,11 +269,17 @@ The name can be made up of numbers, letters and $ or _ , but may not contain spa
 
 **Reserved keyword:** A keyword like "let" or "const" that is a part of the JS-language and has a special meaning to it.  
 
-**Undefined:** Datatype of a variable which does not yet have a value. 
+**Undefined:** A language default. 
+
+Variable: Datatype of a variable which does not yet have a value. The absens of a value.
+
+Function: When an argument is not provided, but it's named  in the function definition, "undefined" is assigned as it's value. In this case, the return value will also be "undefined".
 
 **Nan:** "Not a number". 
 
-**Null:** Nothing. Also means "non-existent".
+**Null:** Nothing. Also means "non-existent". Often used by developers when explicitly wanting to set something to "nothing" / clear a value. 
+
+Used as an alternative to the language default "undefined", so that we don't lose the context; Is it the program or we as developers who have set "undefined"?. 
 
 **Boolean:** A logical data type that can only be true or false. 
 
