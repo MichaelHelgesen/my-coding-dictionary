@@ -1,3 +1,18 @@
+**Arguments default:** We can set a default value on the parameters when defining a function. If no arguments are set when calling the function, the default will be used. 
+
+    let getScoreText = function (name, score = 0) { // 0 is set as default for score.
+        console.log(name);
+        console.log(score);
+    }
+    
+    getScoreText('Andrew'); // Function call with just one or two arguments set.
+
+When we don't want to pass an argument, we can set it to undefined when calling the function.
+
+    getScoreText(undefined, 100);
+
+**Expressions:** "An expression is any valid unit of code that resolves to a value" - MDN
+
 **Return statement:** The reserved keyword "return". Can only be used a single time in our functions.
 
 **Return value:** Returns the result of the code in the function.
