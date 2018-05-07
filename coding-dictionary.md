@@ -1,3 +1,30 @@
+**Template strings (ES6):** Introduced in ES6 as an easier way to combine / concatenate strings. 
+
+To create a template string, we need to use back-ticks. In the part where we want to inject another value, we use a dollar sign ($) followed by opening and closing curly braces. Inside we add a JavaScript expression pointing to wanted value.
+
+    let name = 'Mikke'
+    console.log(`Hey, my name is ${name}!`)
+
+We can add as many values as we need to into the string.
+
+    console.log(`Hey, my name is ${name}! I am ${age} old`)
+
+**Function scope:** The same scoping rules that applies to the program as a whole also applies to the functions.
+
+The functions define local scopes. That includes everything inside the code block, but also the function arguments.
+
+    // Global scope (convertFarenheitToCelsius, celsius)
+    // Local scope (farenheit, celsius)
+
+    let convertFerenheitToCelcius = function (farenheit) {
+    let celsius = (farenheit - 32) * 5 / 9;
+    return celsius;
+    }
+
+    let celsius = convertFerenheitToCelcius(68);
+
+    console.log(celsius)
+
 **Arguments default:** We can set a default value on the parameters when defining a function. If no arguments are set when calling the function, the default will be used. 
 
     let getScoreText = function (name, score = 0) { // 0 is set as default for score.
