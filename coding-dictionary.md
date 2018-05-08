@@ -1,3 +1,32 @@
+
+**Dot notation:** A way to access an objects property.
+
+**Objects:** Objects are a way to store related information about a single entity (like a book: title, pages, author, publish year) in one place. With object we model things.
+
+Object are created with a variable name and opening and closing curly braces:
+
+    let myBook = {
+    
+    }
+
+Inside we need to define the various properties (properties describes the pieces of data stored on an object) for the object.
+
+        let myBook = {
+            title: 'Ego is the enemy'
+        }
+
+Above we have an object with a single property (title), and that propertys value is a string: 'Ego is the enemy'. 
+We can add as many properties as we want to an object.
+
+To retrieve information (object properties) we use dot notation
+
+    console.log(myBook.title) // "Ego is the enemy"
+
+We also use dot notation to set / change the value in an object.
+
+    myBook.title = 'The obstacle is the way'
+
+
 **Template strings (ES6):** Introduced in ES6 as an easier way to combine / concatenate strings. 
 
 To create a template string, we need to use back-ticks. In the part where we want to inject another value, we use a dollar sign ($) followed by opening and closing curly braces. Inside we add a JavaScript expression pointing to wanted value.
