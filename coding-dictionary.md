@@ -1,5 +1,19 @@
 
-**Dot notation:** A way to access an objects property.
+**Assignment operator:**
+
+**Objects references:** When we pass an object as an argument, the arguments value is not just a clone of the object that gets passed, but a reference to the exact same one that is stored in memory.
+
+So for example when we pass an object into a function, we can manipulate it's properties. If so, we manipulate the properties of the original object that gets passed in. But if we assign a new value to that argument, we break this binding. In that case, the argument does not point to the same thing as the object passed in as the argument does. So we can not use assignment operator (=) to clear the object or set it to something new. 
+
+**Dot notation (objects):** A way to access the property of an object if we know the name of it.
+
+    let myPerson = {
+    name: 'Mikke',
+    age: 38,
+    location: 'Norway'
+    }
+
+    console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`);
 
 **Objects:** Objects are a way to store related information about a single entity (like a book: title, pages, author, publish year) in one place. With object we model things.
 
@@ -25,6 +39,8 @@ To retrieve information (object properties) we use dot notation
 We also use dot notation to set / change the value in an object.
 
     myBook.title = 'The obstacle is the way'
+
+It's also a good idea to use objects with functions. If we pass objects into functions and return objects from functions, we can keep our function arguments a little cleaner by passin in just a single value instead of many, and it will allow us to return multiple values.
 
 
 **Template strings (ES6):** Introduced in ES6 as an easier way to combine / concatenate strings. 
