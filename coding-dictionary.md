@@ -1,5 +1,34 @@
 
-**Assignment operator:**
+**String methods and properties:** The string global object is a constructor for strings or a sequence of characters. And as such, there is a lot of different methods and properties avaliable from JavaScript itself, like ".length", ".toUpperCase()", ".charAt()". 
+
+[See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+**This (keyword):** A keyword that causes a lot of confusion. 
+
+Inside of our methods, we can use the "this" keyword. "This" references the object the method is defined in.   
+
+See "Methodes (object)".
+
+**Methods (object):** We can also add functions as property values. So a method is an object property, whos value is a function.
+
+    let restaurant = {
+    name: "Mikke's",
+    guestCapacity: 75,
+    guestCount: 0,
+    checkAvaliability: function (partySize) {
+            console.log(partySize);
+        }
+    }  
+
+How is this useful? With a function as a object property value, we get access to all the objects properties inside the function.
+
+To access the objects properties, we use the "this" keyword.
+
+Inside of our methods, we can use the "this" keyword. "This" references the object the method is defined in.   
+
+By using objects and methods we are able to create a self contained unit where we have the functionality (our methods) stored along side the data that they work on.   
+
+**Assignment operator (=):**
 
 **Objects references:** When we pass an object as an argument, the arguments value is not just a clone of the object that gets passed, but a reference to the exact same one that is stored in memory.
 
