@@ -1,5 +1,14 @@
 
-**String methods and properties:** The string global object is a constructor for strings or a sequence of characters. And as such, there is a lot of different methods and properties avaliable from JavaScript itself, like ".length", ".toUpperCase()", ".charAt()". 
+**Math object:** This is a built in object that has properties and methods for mathematical constants and functions. Not a function object. 
+
+**Number object:** From MDN: The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor.
+
+There are a lot less usefull methods avaliable for numbers compared to strings, since most calculations is done using the mathematical operators (+, -, *, /). 
+
+[See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+
+
+**String object:** The string global object is a constructor for strings or a sequence of characters. And as such, there is a lot of different methods and properties avaliable from JavaScript itself, like ".length", ".toUpperCase()", ".charAt()". 
 
 [See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 
