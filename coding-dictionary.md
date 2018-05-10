@@ -1,3 +1,13 @@
+**Array methods:** Different ways to manipulate the arrays.
+
+* .pop() = remove last item.
+* .push() = add item to the rear of the list.
+* .shift() = remove first item.
+* .unshift() = add item to the front of the list.
+* .splice() = add items to the middle of an array,  or remove elements from anywhere in the list. _notes.splice(1, 1)_ removes the middle item in a list of three. _notes.splice(1, 0, 'This is the new second item')_ adds a new item after the first one in the list.
+
+[See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 **Bracket notation:** A way to reference items in an array.
 
     console.log(arrayList[3])
