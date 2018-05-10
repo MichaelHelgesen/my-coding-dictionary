@@ -1,3 +1,18 @@
+**Bracket notation:** A way to reference items in an array.
+
+    console.log(arrayList[3])
+
+**Index (arrays):** The order the item comes in the array. The index starts at 0 in arrays.
+
+**Arrays / array object:** Array is a global object thats used to create lists. Can store several types of data in one place, like a sting, a number, a boolean, another array, and objects. 
+
+We declare a new array with opening and closing brackets ([]). Every unique data is separated with a comma.
+
+    var sandwich = ["peanut butter", "jelly", "bread"]
+
+[See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+**hoisting:** When declaring a variable using "var", it gets hoisted to the top by the program. So even if we reference a "var" before it is declared, we get no errors. But it's only the declaration that gets hoisted, NOT the value.
 
 **Math object:** This is a built in object that has properties and methods for mathematical constants and functions. Not a function object. 
 
@@ -199,6 +214,8 @@ If we assign a value to a variable that is not declared anywhere in the local or
 
 In a scope you can access variables defined in that scope, or in any parent/ancestor scope.
 
+Scopes are created in functions.
+
 **Operator:** Constructs which behave generally like functions. Commons examples are arithmetic (+, -), comparison (>, <) and logical operations (&&, ||).
 
 **Operand:** An operand is the object that is being worked on by an operation. 
@@ -382,15 +399,23 @@ It's actually optional, and we can rely on automatic semicolon insertion:
  
  "Undefined" if not given a value.  
 
+ Also tells the reader of the code if this is a variable that can be changed.
+
 **var:** A variable declaration. The name can be made up of numbers, letters and $ or _ , but may not contain spaces or start with a number. And they can not be reserved keyword like "let" and "const".
 
 "Undefined" if not given a value. 
 
-**const (ES6):** A variable declaration introduced in ES6 and is used when a value is going to be constant.
+"var", as opposed to "const" and "let", is function scoped, not block scoped. So if we don't make a function, the "var" is avaliable from anywhere. That can cause us to lose control. 
+
+**const (ES6):** A variable declaration introduced in ES6 and is used when a value is going to be constant. So we can't reassign a constant after it has been created. 
 
 The name can be made up of numbers, letters and $ or _ , but may not contain spaces or start with a number. And they can not be reserved keyword like "let" and "const".
 
 "Undefined" if not given a value.
+
+When it comes to const objects, we can still manipulate the properties, but we can not assign a new value to it.  
+
+Also tells the reader of the code if this is a variable that's never going to change.
 
 **Reserved keyword:** A keyword like "let" or "const" that is a part of the JS-language and has a special meaning to it.  
 
