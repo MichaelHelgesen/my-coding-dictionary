@@ -23,10 +23,11 @@ We are never calling the callback function directly, instead we pass it into the
 * .shift() = remove first item.
 * .unshift() = add item to the front of the list.
 * .splice() = add items to the middle of an array,  or remove elements from anywhere in the list. _notes.splice(1, 1)_ removes the middle item in a list of three. _notes.splice(1, 0, 'This is the new second item')_ adds a new item after the first one in the list.
-* .forEach() = Loop over an array and apply the same code to all items. It is a function and takes a single argument that is also a function. This is a callback function that comes with two arguments we can access: item and.
+* .forEach() = Loop over an array and apply the same code to all items. It is a function and takes a single argument that is also a function. This is a callback function that comes with two arguments we can access: item and index.
 "item" refers to each individual item in the array. The second argument is the "index", which gives us the index of each individual item.
 * .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1.
 * .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the aruments item and index. Return true or false. Stops at first match. Returns -1 if nothing is found.
+* .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex(). 
 
 [See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
@@ -41,6 +42,8 @@ We are never calling the callback function directly, instead we pass it into the
 We declare a new array with opening and closing brackets ([]). Every unique data is separated with a comma.
 
     var sandwich = ["peanut butter", "jelly", "bread"]
+
+Arrays, like objects, are passed as reference. That means that if you pass an array into a function and change it's values, it will directly change the original one. 
 
 [See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
