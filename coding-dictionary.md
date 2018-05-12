@@ -1,3 +1,35 @@
+**Method chaining:** You can add methods on other methods, as long as they are of the correct data type. 
+
+    note.title.toLocaleLowerCase().includes('gr')
+
+**In place:**
+
+**Sort array method .sort() (compare function):** Method that sorts the array in place. Don't need an argument, but can take one. Default sorting is alfabethical when used on strings.  
+
+The argument can take a function, in which we can specify the sort order.
+
+    arr.sort([compareFunction])
+
+The .sorts function compares one item with another, deciding who comes before the other. Where other array methods' (like .forEach() and .indexOf()) functions gets called one time for each item, the .sort(item1, item2) function gets called with two individual items. 
+
+If item1 should come first, we return -1. If item two should come first, we return 1. If they are the same, we return 0, saying we don't need to change the order.
+
+Capitalization is important since capital A comes before a.
+
+**Filtering arrays .filter():** Consept of taking an existing array and creating a new array with some of the items based of the filtering.
+
+    notes.filter(function (note, index) {
+    
+    })
+
+This is a callback function like .forEach() and .findIndex(). It takes a single argument which is a function. The callback function takes two arument, the individual item and the index. It returns a boolean like .getIndex() and .find(). 
+
+So if the boolen is true, it should be kept in the new array we are generating. 
+
+.filter() gives back a new array, it does not change the original array.
+
+No matches would return an empty array.
+
 **Searching for objects:** When comparing two objects, it doesn't matter if they have the same set of object properties and the same set of object property values. That doesn't make two objects equal. 
 
 What makes two objects equal is if they are the exact same object in memory.
@@ -28,6 +60,8 @@ We are never calling the callback function directly, instead we pass it into the
 * .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1.
 * .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the aruments item and index. Return true or false. Stops at first match. Returns -1 if nothing is found.
 * .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex(). 
+
+See also _filtering arrays_.
 
 [See MDN for a complete list and documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
