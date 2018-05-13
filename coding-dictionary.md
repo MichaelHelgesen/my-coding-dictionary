@@ -1,3 +1,31 @@
+**Document object:** 
+* .remove() = remove an element. Takes no argument.
+* .textContent = get the text content of an HTML element, or set it.
+* createElement('element') = Allows us to create a new element. We define the element in the paretheses.
+* appendChild('elementToAppend') = Adds an item last in the defined element. The element is set in the parentheses.
+             
+      document.querySelector('body').appendChild(newParagraph)
+
+* 
+
+**QuerySelector / querySelectorAll:** A method to search the document object for a given element. It gets called with a single argument, a string, where we define what we are looking for.
+
+    document.querySelector('p')
+
+What comes back is a representation of the element we defined as the argument.
+
+The query only selects the first match. If you want to target all, we have to use 
+
+    querySelectorAll('string')
+
+This creates a node list of alle the matching elements. 
+
+**Document:** The object provided to us by the browser so that we can manipulate the HTML content with JavaScript. It comes with a lot of information and methods we can use.
+
+**DOM:** Stands for Document Object Model. The "document" in DOM is the HTML-document. The "object" is a javaScript object. So we have a JS object that models our HTML document.
+
+So we use DOM when we want to do something with our HTML with JavaScript.
+
 **Method chaining:** You can add methods on other methods, as long as they are of the correct data type. 
 
     note.title.toLocaleLowerCase().includes('gr')
@@ -59,7 +87,17 @@ We are never calling the callback function directly, instead we pass it into the
 "item" refers to each individual item in the array. The second argument is the "index", which gives us the index of each individual item.
 * .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1.
 * .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the aruments item and index. Return true or false. Stops at first match. Returns -1 if nothing is found.
-* .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex(). 
+* .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex().
+* .reduce() = An alternative to forEach() if you want to add values together. It applies a function against an accumulator for each item in the array. It takes four arguments: accumulator, currentValue, currentIndex and array
+
+      [0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+      return accumulator + currentValue;
+      });
+
+    In this example the accumulator changes from 0 - 1 - 3 - 6, the currentValue from 1 - 2 - 3 -4, the currentIndex from 1 - 2 - 3 - 4 and the return value from 1 - 3 - 6 - 10
+
+    So it adds up the items in the array: 0 + 1 + 2 + 3 + 4.
+
 
 See also _filtering arrays_.
 
