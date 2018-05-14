@@ -1,3 +1,23 @@
+**Class (html):** An identifier that can be held by multiple elements in the HTML document. 
+
+**Id (html):** A unique identifier that lets us target the element in the HTML document.
+
+    <button id="remove-all">Remove all notes</button>
+
+**Event handler / event listener / addEventListener** There are a lot of different events we can listen to on a web page. An event is something a user does, like click something, scroll or hover over something. 
+
+An event listener is a function that runs when the user performes an event. We attach a event listener to an event.
+
+    document.querySelector('button').addEventListener('click', functionName / function)
+
+This method takes to arguments, a string describing the action, followed by the function name or function.
+
+There is also an argument passed to the callback function, often refered to as "e" as in "event". It gives us access to a lot of information. This argument represents the event. It is useful when we want to do something with the element the event gets fired on.
+
+    document.querySelector('button').addEventListener('click', function(e) {
+    e.target.textContent = 'The button was clicked'
+    })
+
 **Document object:** 
 * .remove() = remove an element. Takes no argument.
 * .textContent = get the text content of an HTML element, or set it.
