@@ -1,6 +1,6 @@
-**Class (html):** An identifier that can be held by multiple elements in the HTML document. 
+**Class (HTML):** An identifier that can be held by multiple elements in the HTML document. 
 
-**Id (html):** A unique identifier that lets us target the element in the HTML document.
+**Id (HTML):** A unique identifier that lets us target the element in the HTML document.
 
     <button id="remove-all">Remove all notes</button>
 
