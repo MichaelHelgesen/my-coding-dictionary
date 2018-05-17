@@ -21,7 +21,8 @@ There is also an argument passed to the callback function, often refered to as "
 Some event methods and properties
 * .preventDefault() = When combined with 'submit' it stops the default browser behaviour of refreshing the page and clearing the form fields.
 * .taget = Used so that we can get access to the data in the object that the event fires on. So we can property chain with for example .textContent, .value or .elements if it's a form.
-* .elements = Gives us access to all the fields in a form that the event fires on. Chained with name of field. 
+* .elements = Gives us access to all the fields in a form that the event fires on. Chained with name of field.
+* .checked = A boolean to check if a checkbox is is checked or not. 
 
 **Document object:** 
 * .remove() = remove an element. Takes no argument.
