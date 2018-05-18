@@ -1,3 +1,23 @@
+**JSON (JavaScript Object Notation):** A global variable. It allows us to convert data into a string and vice versa.
+
+Methods: 
+* .stringify() = Takes in your data like object and array and returns a string. We pass the data we want to stringify as the argument.
+* .parse() = Takes data converted to string, and converts it back to it's original form.
+
+We use stringify just before we write our object. We use parse just after we read it.
+
+**Local storage (global variable):** The ability to store data locally, so that we can fetch it later or not loose it when refreshing the page. In JavaScript it can perform the CRUD operations that make up data storage mechanism.
+
+The global variable "localStorage" is provided by the browser, like "document". It can only store strings, and it contains several methods we can use, like:
+
+* .setItem(key, value) = C in CRUD (create). Create data with local storage. Two arguments: key value pair.
+* .getItem(key) = R in CRUD (read). Get an item stored in local storage. One argument, the key.
+* U in CRUD = Updates the local storage, by using .setItem() described above. 
+*  .removeItem(key) = D in CRUD (delete). Deletes an item in local storage. Takes one argument, the key.
+* .clear() = Delete everything in local storage. Takes no arguments. 
+
+**CRUD:** Stands for "create, read, update and delete". These four operations is what makes up the data storage mechanism.  
+
 **Class (HTML):** An identifier that can be held by multiple elements in the HTML document. 
 
 **Id (HTML):** A unique identifier that lets us target the element in the HTML document.
