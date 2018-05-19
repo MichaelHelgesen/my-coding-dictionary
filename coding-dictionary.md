@@ -1,3 +1,9 @@
+**Global namespace:** Meaning that JavaScript data is avaliable globally, even though it's refactored into several files, and as long as all the files are loaded in and in correct order.
+
+**Refactoring:** The concept of re-structuring your code without changing the external behaviour. The goal is not to create as few lines as possible, as that would only make it so complex it would be difficult to read and change. 
+
+The goal is to make the code more reasonable, easier to comprehend, update, read and change.
+
 **JSON (JavaScript Object Notation):** A global variable. It allows us to convert data into a string and vice versa.
 
 Methods: 
