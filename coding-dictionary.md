@@ -1,3 +1,9 @@
+**Debugger statement:** We put a debugger statement anywhere in the code where we want to pause the code to figure out what variable values equal.
+
+Just type "debugger".
+
+**Debugging:** The art of getting bugs out of your code.
+
 **Global namespace:** Meaning that JavaScript data is avaliable globally, even though it's refactored into several files, and as long as all the files are loaded in and in correct order.
 
 **Refactoring:** The concept of re-structuring your code without changing the external behaviour. The goal is not to create as few lines as possible, as that would only make it so complex it would be difficult to read and change. 
