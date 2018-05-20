@@ -64,7 +64,7 @@ Some event methods and properties
              
       document.querySelector('body').appendChild(newParagraph)
 
-* 
+* .setAttribute() = Define an elements attribute. For example change an input from the default "text" to "checkbox". Takes two arguments, type and attribute. 
 
 **QuerySelector / querySelectorAll:** A method to search the document object for a given element. It gets called with a single argument, a string, where we define what we are looking for.
 
