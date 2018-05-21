@@ -108,7 +108,7 @@ Capitalization is important since capital A comes before a.
     
     })
 
-This is a callback function like .forEach() and .findIndex(). It takes a single argument which is a function. The callback function takes two arument, the individual item and the index. It returns a boolean like .getIndex() and .find(). 
+This is a callback function like .forEach() and .findIndex(). It takes a single argument which is a function. The callback function takes two arument, the individual item and the index. It returns a boolean like .findIndex() and .find(). 
 
 So if the boolen is true, it should be kept in the new array we are generating. 
 
@@ -143,8 +143,8 @@ We are never calling the callback function directly, instead we pass it into the
 * .splice() = add items to the middle of an array,  or remove elements from anywhere in the list. _notes.splice(1, 1)_ removes the middle item in a list of three. _notes.splice(1, 0, 'This is the new second item')_ adds a new item after the first one in the list.
 * .forEach() = Loop over an array and apply the same code to all items. It is a function and takes a single argument that is also a function. This is a callback function that comes with two arguments we can access: item and index.
 "item" refers to each individual item in the array. The second argument is the "index", which gives us the index of each individual item.
-* .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1.
-* .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the aruments item and index. Return true or false. Stops at first match. Returns -1 if nothing is found.
+* .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1. (Not a callback function)
+* .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the aruments item and index. If the match is true, it returns the index. Stops at first match. Returns -1 if nothing is found.
 * .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex().
 * .reduce() = An alternative to forEach() if you want to add values together. It applies a function against an accumulator for each item in the array. It takes four arguments: accumulator, currentValue, currentIndex and array
 
