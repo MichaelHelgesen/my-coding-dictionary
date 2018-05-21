@@ -1,3 +1,8 @@
+**Location** A global object provided by the browser. It contains different properties and the "assign" method. It functions much like the "href" in the anchor tag. It takes one argument, a string, which is a link.
+
+* location.assign('link')
+* .hash = Property that contains the hash portion of the URL.
+
 **Debugger statement:** We put a debugger statement anywhere in the code where we want to pause the code to figure out what variable values equal.
 
 Just type "debugger".
