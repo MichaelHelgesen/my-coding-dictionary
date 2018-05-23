@@ -1,3 +1,23 @@
+**Unix Epoch:** A specific point in time that is in the past:
+
+* January 1st 1970 00:00:00
+* We use a positive number to indicate time after unix epoch, and a negative number to indicate a time before 1970.
+* Represented by "0"
+* One second from 0 = 1000 ms
+* One minute in the past: -60000
+
+
+**toString():** Returns a string representing the object.
+
+**Date():** Gives us the current date to work with. A lot of methods to work with. 
+
+If not given an argument, it gives us the current point in time. But if we add some arguments, we can define when this "now" represents. 
+
+    new Date() // Current time.
+    new Date('January 21 2001 6:25:01') // Set "now". 
+
+**New operator:** Create a new instance of a variable.
+
 **Storage (event):** A special event that fires when any of the data in local storage changes.
 
 You don't see the changes in the current tab (window) where you actually do the changes to local storage, only in the other ones we have open.
