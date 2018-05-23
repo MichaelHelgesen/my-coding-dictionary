@@ -1,3 +1,20 @@
+Global event:
+
+**Window:** A global variable provided by the browser. It provides a lot of interesting things related to the browser window. It's a representation of it. It also contains all of the other browser globals. It contains a lot of properties like
+
+* .innerWidth = width of browser window.
+* .innerHeight = height of browser window.
+
+"document" is a shorthand for "window.document".
+
+We often attach events on window if we want a global event, meaning we can't or don't want to attach the event to any of the elements on the page.
+
+**Substring:** A method to get part of a string.
+
+* .substring(start, end) 
+
+It takes two number arguments. The first is start, and the second (optional) is where you want it to end. Remember that it return the data between the numbers, so it does not include the ones we specify.
+
 **Location** A global object provided by the browser. It contains different properties and the "assign" method. It functions much like the "href" in the anchor tag. It takes one argument, a string, which is a link.
 
 * location.assign('link')
