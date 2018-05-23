@@ -1,4 +1,8 @@
-Global event:
+**Storage (event):** A special event that fires when any of the data in local storage changes.
+
+You don't see the changes in the current tab (window) where you actually do the changes to local storage, only in the other ones we have open.
+
+**Global event:**
 
 **Window:** A global variable provided by the browser. It provides a lot of interesting things related to the browser window. It's a representation of it. It also contains all of the other browser globals. It contains a lot of properties like
 
@@ -7,7 +11,7 @@ Global event:
 
 "document" is a shorthand for "window.document".
 
-We often attach events on window if we want a global event, meaning we can't or don't want to attach the event to any of the elements on the page.
+We often attach events on window if we want a global event, meaning we can't or don't want to attach the event to any specific element, but the window as a whole.
 
 **Substring:** A method to get part of a string.
 
