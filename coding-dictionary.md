@@ -2,9 +2,10 @@
 
 * January 1st 1970 00:00:00
 * We use a positive number to indicate time after unix epoch, and a negative number to indicate a time before 1970.
-* Represented by "0"
+* Unix Epoch is represented by "0"
 * One second from 0 = 1000 ms
 * One minute in the past: -60000
+* We use .getTime() to get the number.
 
 
 **toString():** Returns a string representing the object.
@@ -13,8 +14,9 @@
 
 If not given an argument, it gives us the current point in time. But if we add some arguments, we can define when this "now" represents. 
 
-    new Date() // Current time.
-    new Date('January 21 2001 6:25:01') // Set "now". 
+    const date = new Date() // Current time.
+    const date new Date('January 21 2001 6:25:01') // Set "now".
+    const timeStamp = now.getTime() // Get timestamp. Ref. Unix Epoch. 
 
 **New operator:** Create a new instance of a variable.
 
