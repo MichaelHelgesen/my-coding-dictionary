@@ -10,7 +10,7 @@
 
 **toString():** Returns a string representing the object.
 
-**Date():** Gives us the current date to work with. A lot of methods to work with. 
+**Date():** Gives us the current date. It includes a lot of methods. 
 
 If not given an argument, it gives us the current point in time. But if we add some arguments, we can define when this "now" represents. 
 
@@ -18,7 +18,7 @@ If not given an argument, it gives us the current point in time. But if we add s
     const date new Date('January 21 2001 6:25:01') // Set "now".
     const timeStamp = now.getTime() // Get timestamp. Ref. Unix Epoch. 
 
-**New operator:** Create a new instance of a variable.
+**new operator:** Create a new instance of a variable.
 
 **Storage (event):** A special event that fires when any of the data in local storage changes.
 
