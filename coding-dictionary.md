@@ -1,3 +1,58 @@
+**Conditional operator (ternary operator):** Allows us to use a bit of conditional logic without having to use the if statement. It's not a complete replacement though. But it is a nice little short hand for specific cases. 
+
+    const myAge = 27
+    let message
+
+    message = myAge >= 18 ? 'You can vote' : 'You can not vote'
+
+    // Same as above
+    /* if(myAge >= 18) {
+        message = 'You can vote'
+    } else {
+        message = 'You can not vote'
+    } */
+
+    console.log(message)
+
+The code above can be shortened even more, by setting the conditional operator directly on the message variable
+
+    const myAge = 27
+    const message = myAge >= 18 ? 'You can vote' : 'You can not vote'
+
+We start of by the condition. Then comes a questionmark, followed by the value if the condition passes. Next comes the colon, followed by the value if the condition is false.
+
+We can also use functions in the ternery operator: 
+
+    myAge >= 21 ? showPage() : showErrorPage()
+
+**Arrow function:** They don't bind arguments, they don't bind "this" and they come with an advanced short hand syntax. 
+
+An alternative way to create a function in JavaScript. It comes with a special syntax, making it great to use if we have simple one line functions. 
+
+In arrow function, we start with the arguments list "()". Then comes the arrow "=>" followed by the function body wrapped in curly braces "{}".
+
+    const squareLong = (num) => {
+    return num * num;
+    }
+
+One of the differences between arrow functions and a regular functions is the short hand syntax. It's a different way to define the function body and can only be done with arrow functions. 
+
+To use it, we first have to check if the function qualifies for it. If it's a simple function body with one line that just returns something, it's a great canditate. In this case, we can remove the curly braces and the return statement and just enter the expression.
+
+    const square = (num) => num * num
+
+Arguments only exist in regular functions. There is no "bound", no local variable, in arrow functions. So this code will fail: 
+
+    const add = () => {
+        return arguments[0] + arguments[1]
+    } 
+
+    console.log(add(11, 22, 33, 4))
+
+Arguments also don't bind their "this" value, making them less usable as methods.
+
+ 
+
 **Unix Epoch:** A specific point in time that is in the past:
 
 * January 1st 1970 00:00:00
@@ -246,14 +301,21 @@ Inside of our methods, we can use the "this" keyword. "This" references the obje
 
 See "Methodes (object)".
 
-**Methods (object):** We can also add functions as property values. So a method is an object property, whos value is a function.
+**Methods (object):** We can also add functions as property values. So a method is an object property, whos value is a function (Functions defined on objects).
 
-    let restaurant = {
-    name: "Mikke's",
-    guestCapacity: 75,
-    guestCount: 0,
-    checkAvaliability: function (partySize) {
-            console.log(partySize);
+    const car = {
+    color: 'Red',
+    getSummary: function () {
+        return `This car is ${this.color}`
+        }
+    }
+
+Can be shortened to this: 
+
+    const car = {
+    color: 'Red',
+    getSummary() {
+        return `This car is ${this.color}`
         }
     }  
 
@@ -360,6 +422,17 @@ Function: The output value / result of the function.
 **Parameters:** The names listed in the function definition.
 
 **Arguments:** The _real_ values that get passed to and recieved by the function. 
+
+REGULAR FUNCTIONS ONLY:
+We can access the arguments list in our local function by also using "arguments". So if we pass more arguments than parameters, they get stored and is accessible through "arguments".
+
+    const add = function (a, b) {
+    return arguments[0] + arguments[1]
+    } 
+
+    console.log(add(11, 22, 33, 4))
+
+NB: Arguments only exist in regular functions. There is no "bound", no local variable, in arrow functions.
 
 **Function:** Put simply: A program inside the program. This sub program can be executed as many times as we want. It is also the keyword we need to use, followed by a set of parentheses and curly braces.
 
