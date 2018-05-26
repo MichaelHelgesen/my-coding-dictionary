@@ -1,3 +1,39 @@
+**Truthy and falsy (not true and false):** All valuables in JavaScript is either truthy or falsy. So when evaluated in a boolean context, it ends up beein true or false. 
+
+So if we take this: 
+
+    const products = []
+    const product = products[0]
+
+    if (product !== undefined) {
+        console.log('Product found')
+    } else {
+        console.log('Product not found')
+    }
+
+And replace the boolean in "if" with this: 
+
+    if ('testing') {
+        console.log('Product found')
+    } else {
+        console.log('Product not found')
+    }
+
+What happens? JavaScript will try it's best to convert the string (or anything else not boolean) into a boolean. This is where the truthy and falsy definitions come into play. In the example above, JS sees the string as true.
+
+But it's actually easier to define whats falsy, and then know that everything else is truthy. 
+
+Falsy values:
+* null
+* false
+* '' (empty string)
+* 0
+* undefined
+* NaN
+
+Knowing this, it can be used to clean up code and refactor it. We can use them in our if conditions and ternary operators. 
+
+
 **Conditional operator (ternary operator):** Allows us to use a bit of conditional logic without having to use the if statement. It's not a complete replacement though. But it is a nice little short hand for specific cases. 
 
     const myAge = 27
