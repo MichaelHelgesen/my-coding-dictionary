@@ -1,3 +1,53 @@
+**Try / catch:** Can be used to prevent the whole program to stop when there is an error. A way to cover from errors gracefully: Doing something as opposed to just letting it explode.
+
+Boilerplate: 
+
+    try {
+
+    } catch (e) {
+        
+    }
+
+**Throwing an error (throw):** When we throw an error, it crashes our program. We can add a message and some context as to what the problem was. Nice for type checking.
+
+    if (typeof amount === 'number') {
+            return amount * .25
+        } else {
+            throw 'Argument must be a number'
+        }
+
+If we want more info, we can add the message into "Error()"
+
+        if (typeof amount === 'number') {
+            return amount * .25
+        } else {
+            throw Error('Argument must be a number')
+        }
+
+
+**Equality:** 
+
+* Strict (===): Type in effect. Must be the same and same type.
+* Loose (==): Takes type out, so 5 becomes the same as '5'. No need to use. 
+
+
+**Type coercion:** JavaScript tries to convert data types if values are of different type. This is best avoided with strings and numbers.
+
+    console.log('5' + 5) // 55
+    console.log('5' - 5) // 0
+
+Three types of coercions:
+* String (avoid).
+* Number (avoid).
+* Boolean (OK: truthy / falsy).
+
+True gets converted to 1, and false gets converted to 0:
+
+    const value = true + 12
+    const type = typeof value
+    console.log(type)
+    console.log(value)
+
 **Truthy and falsy (not true and false):** All valuables in JavaScript is either truthy or falsy. So when evaluated in a boolean context, it ends up beein true or false. 
 
 So if we take this: 
@@ -782,4 +832,8 @@ A variable name can only be defined once, or we get a SyntaxError: "Identifier '
 The variable name can be made up of numbers, letters and $ or _ , but may not contain spaces or start with a number. And they can not be reserved keyword like "let" and "const".
 
 **Data types:** JavaScript contains seven different datatypes which are undefined, null, boolean, string, symbol, number and object.
+
+We can check a datas type by using
+
+    typeof 123
 
