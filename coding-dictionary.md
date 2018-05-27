@@ -1,3 +1,11 @@
+**Strict mode:** A mode in JavaScript where the quirks are tweaked and it's not so easy to fall into weird language traps. This is a better mode making it harder to mess up. 
+
+To set up:
+
+    'use strict'
+
+Strict helps us code better today, and also makes it future proof.
+
 **Try / catch:** Can be used to prevent the whole program to stop when there is an error. A way to cover from errors gracefully: Doing something as opposed to just letting it explode.
 
 Boilerplate: 
