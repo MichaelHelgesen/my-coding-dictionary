@@ -1,3 +1,33 @@
+**Split (string):** A method avaliable on strings. Returns an array. Takes one argument, that is a string. 
+
+**Prototypal inheritance (object oriented programming / prototype property):** Protoypal inheritance is a form of inheritance. 
+
+    Person.prototype.getBio = function () {
+        return `${this.firstName} is ${this.age}`
+    }
+
+By setting up methods on the constructor functions prototype property, all instances of that object get access to it. 
+
+**Object oriented programming:** Objects, as we know, is used to model real life things, like a car, a person, a todo list, a note taking list and so on. Object oriented programming is based on these objects and is focused on code reusability.
+
+We can make a object template, and than use that to create as many instances of that object as we need. These instances share the object properties, but use them with their unique data. Methods are shared via prototypal inheritance (object prototypes).
+
+With the "new" keyword, we create a new custom object type, based on the object defined after the "new" keyword. This is called a constructor function:
+
+    const me = new Person() //constructor function
+
+What happens is that JavaScript generates a new empty object for the new instance, then it gives us access to this object in the constructor function via the "this" value. By doing this, we are able to customize each instance.
+
+    const Person = function (firstName) {
+        this.firstName = firstName
+    }
+
+    const me = new Person('Mikke')
+
+    console.log(me)
+
+A constructor function ususally gets defined with a capital letter. It makes it easier to separate and to know that it needs to be called with a "new" keyword in front. 
+
 **Strict mode:** A mode in JavaScript where the quirks are tweaked and it's not so easy to fall into weird language traps. This is a better mode making it harder to mess up. 
 
 To set up:
