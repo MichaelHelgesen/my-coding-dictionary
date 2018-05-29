@@ -1,12 +1,28 @@
 **Split (string):** A method avaliable on strings. Returns an array. Takes one argument, that is a string. 
 
-**Prototypal inheritance (object oriented programming / prototype property):** Protoypal inheritance is a form of inheritance. 
+**Prototypal inheritance (object oriented programming / prototype property / prototype chain):** Protoypal inheritance is a form of inheritance. 
 
     Person.prototype.getBio = function () {
         return `${this.firstName} is ${this.age}`
     }
 
-By setting up methods on the constructor functions prototype property, all instances of that object get access to it. 
+By setting up methods on the constructor functions prototype property, all instances of that object get access to it.
+
+How does it work? Say that we have this code: 
+
+    const me = new Person('Mikke', 'Helgesen', '38')
+    // me.[[Prototype]] = Person.prototype
+
+The me.prototype gets equal to the constructor functions prototype. If we try to access first name, it finds it in the instance, because we as the developer defined it here:
+
+    console.log(me.firstName)
+
+But if we try to access a prototype, it doesn't find it in the instance:
+
+    const bio = me.getBio()
+    console.log (bio)
+
+What happens is that it finds a prototype property that links to the shared set of methods on the constructor function. So we move up the prototype chain to get the method. If it's not there either, it's undefined.
 
 **Object oriented programming:** Objects, as we know, is used to model real life things, like a car, a person, a todo list, a note taking list and so on. Object oriented programming is based on these objects and is focused on code reusability.
 
