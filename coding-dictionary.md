@@ -1,3 +1,35 @@
+**Literal syntax:** 
+
+**Object.prototype:** This is where methods like filter, split and hasOwnProperty lives. At the top of the prototype chain. 
+
+When we create objects, they are all instances of the object protoype, and as such, gets access to all the object prototypes methods. 
+
+We can override the methods (not recommended).
+
+We can define own methods on object.prototype.
+
+**hasOwnProperty:** We can check if an object has a property by providing that property name as an argument. If the property exists it returns true, if not it returns false.
+
+    const product = {
+        name: 'Influence'
+    }
+
+    console.log(product.hasOwnProperty('name'))
+
+But what happens if we put in .hasOwnProperty as an argument? It returns "false". How? We know it is a property. Lets see what the documentation says: 
+
+    Object.prototype.hasOwnProperty()
+
+We see "object.prototype..." that means that these are shared methods, like filter, split, and hasOwnProperty. When using these methods we go up the property chain till we find them on the object prototype.
+
+But hasOwnProperty doesn't go up the chain. So when we run this: 
+
+    console.log(product.hasOwnProperty('hasOwnProperty'))
+
+It only checkes to se if something exists on that specific thing (product). Since hasOwnProperty is on the Object.prototype, the result is "false".
+
+**Primitives:**
+
 **Split (string):** A method avaliable on strings. Returns an array. Takes one argument, that is a string. 
 
 **Prototypal inheritance (object oriented programming / prototype property / prototype chain):** Protoypal inheritance is a form of inheritance. 
@@ -17,12 +49,12 @@ The me.prototype gets equal to the constructor functions prototype. If we try to
 
     console.log(me.firstName)
 
-But if we try to access a prototype, it doesn't find it in the instance:
+But if we try to access a prototype that is not in in the instance:
 
     const bio = me.getBio()
     console.log (bio)
 
-What happens is that it finds a prototype property that links to the shared set of methods on the constructor function. So we move up the prototype chain to get the method. If it's not there either, it's undefined.
+What happens is that it finds a prototype property that links to the shared set of methods on the constructor function. So we move up the prototype chain to get the method. If it's not there either, it's undefined. So it first looks in the instance, then moves up the chain untill it finds it or gets undefined.
 
 **Object oriented programming:** Objects, as we know, is used to model real life things, like a car, a person, a todo list, a note taking list and so on. Object oriented programming is based on these objects and is focused on code reusability.
 
