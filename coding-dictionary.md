@@ -1,4 +1,10 @@
-**Literal syntax:** 
+**Literal syntax:** The syntax of the language allows us to define a value of a specific type, using a series of characters.
+
+    {
+        name: 'Michael'
+    }
+
+The language sees the opening and closing braces and the key value pair inside and defines it as an object.
 
 **Object.prototype:** This is where methods like filter, split and hasOwnProperty lives. At the top of the prototype chain. 
 
@@ -28,11 +34,27 @@ But hasOwnProperty doesn't go up the chain. So when we run this:
 
 It only checkes to se if something exists on that specific thing (product). Since hasOwnProperty is on the Object.prototype, the result is "false".
 
-**Primitives:**
+**Primitive values:** A value that does not have properties. A non object. There is five types:
+
+* String
+* Boolean
+* Number
+* Null
+* Undefined
+
+Everything not in this list is an object.
 
 **Split (string):** A method avaliable on strings. Returns an array. Takes one argument, that is a string. 
 
 **Prototypal inheritance (object oriented programming / prototype property / prototype chain):** Protoypal inheritance is a form of inheritance. 
+
+    // Object: myObject --> Object.prototype --> null
+    // Array: myArray --> Array.prototype --> Object.prototype --> null
+    // Function: myFunc --> Function.prototype --> Object.prototype --> null
+    // String: myString --> String.prototype --> Object.prototype --> null
+    // Number: myNumber --> Number.prototype --> Object.prototype --> null
+    // Boolean: myBoolean --> Boolean.prototype --> Object.prototype --> null
+
 
     Person.prototype.getBio = function () {
         return `${this.firstName} is ${this.age}`
@@ -55,6 +77,10 @@ But if we try to access a prototype that is not in in the instance:
     console.log (bio)
 
 What happens is that it finds a prototype property that links to the shared set of methods on the constructor function. So we move up the prototype chain to get the method. If it's not there either, it's undefined. So it first looks in the instance, then moves up the chain untill it finds it or gets undefined.
+
+But how come we can access methods on primitives like string, number and booleans? Thats because when we attach a method to them, they get converted to an object! They have an object wrapper.
+
+**Object wrapper:** We can access methods on primitives like string, number and booleans. Thats because when we attach a method to them, they get converted to an object! They have an object wrapper.
 
 **Object oriented programming:** Objects, as we know, is used to model real life things, like a car, a person, a todo list, a note taking list and so on. Object oriented programming is based on these objects and is focused on code reusability.
 
@@ -540,7 +566,9 @@ We also use dot notation to set / change the value in an object.
 
     myBook.title = 'The obstacle is the way'
 
-It's also a good idea to use objects with functions. If we pass objects into functions and return objects from functions, we can keep our function arguments a little cleaner by passin in just a single value instead of many, and it will allow us to return multiple values.
+It's also a good idea to use objects with functions. If we pass objects into functions and return objects from functions, we can keep our function arguments a little cleaner by passing in just a single value instead of many, and it will allow us to return multiple values.
+
+Everything that is not a primitive is an object in JavaScript.
 
 
 **Template strings (ES6):** Introduced in ES6 as an easier way to combine / concatenate strings. 
