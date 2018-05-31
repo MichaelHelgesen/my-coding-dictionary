@@ -929,8 +929,6 @@ Used as an alternative to the language default "undefined", so that we don't los
 
     var number = 38;
 
-**Object:**
-
 **Dynamic typing:**
 
 **Data:** In computer science, data is anything that is meaningful to the computer.
