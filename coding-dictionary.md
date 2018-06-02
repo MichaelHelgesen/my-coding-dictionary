@@ -1,3 +1,7 @@
+**fromCharCode:** A string method to get the actuall letter from a key press. 
+
+**keypressed / charCode:** Short for character code, and allows us to detect which character was pressed.
+
 **Literal syntax:** The syntax of the language allows us to define a value of a specific type, using a series of characters.
 
     {
@@ -456,6 +460,8 @@ We are never calling the callback function directly, instead we pass it into the
     In this example the accumulator changes from 0 - 1 - 3 - 6, the currentValue from 1 - 2 - 3 -4, the currentIndex from 1 - 2 - 3 - 4 and the return value from 1 - 3 - 6 - 10
 
     So it adds up the items in the array: 0 + 1 + 2 + 3 + 4.
+
+* .every() = Returns either true or false. It returns true if every array item matches our comparison function, and false otherwise.
 
 
 See also _filtering arrays_.
