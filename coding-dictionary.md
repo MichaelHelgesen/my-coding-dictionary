@@ -1,3 +1,11 @@
+**Getters and setters:** 
+
+**super:**
+
+**Creating subclasses (class syntax):** Makes it possible to create a subclass that inherits all the methods from an already created class.
+
+**Class syntax:** A different way to define things with object constructors. More organized and easier to read.
+
 **fromCharCode:** A string method to get the actuall letter from a key press. 
 
 **keypressed / charCode:** Short for character code, and allows us to detect which character was pressed.
