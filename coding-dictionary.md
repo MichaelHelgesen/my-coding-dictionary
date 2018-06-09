@@ -1,3 +1,7 @@
+**Asynchronous vs Synchronous execution (blocking/ non blocking):** When we execute something synchronously, we start some sort of task and then we have to wait for it to finish, before we move on. This can cause the entire browser to lock up it for example a http request takes to long.
+
+When we execute something asynchronously, we start some sort of task, then we can actually get other work done before that task is complete. This makes the code faster and does not freeze the user interface. 
+
 **Getters and setters:** 
 
 **super:**
