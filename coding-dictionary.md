@@ -1,3 +1,14 @@
+**HTTP Request:** Hypertext Transfer Protocol is a request response protocol. It means that we, the developer, issue some sort of request. This goes of to some sort of third party server. That server does some work and gives us back a response: request <-> response.
+
+The request describes what we, the person making the request, hope to do.
+
+The response contains information about what was actually done.
+
+**Promises:** Alternative to callback.
+
+* Easier to read
+* It's impossible to run more than one of the functions, and it's only going to run once.
+
 **Currying:** Currying refers to the process of transforming a single function that takes a lot of arguments to multiple functions that take a subset of those arguments.  
 
     // Uncurried version
