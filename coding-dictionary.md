@@ -8,6 +8,41 @@ The response contains information about what was actually done.
 
 * Easier to read
 * It's impossible to run more than one of the functions, and it's only going to run once.
+* When using the .then method more than once, we don't call the Promise multiple time. We just use the data from the first time it was called.
+
+Example:
+
+
+
+    // Callback
+    const getDataCallback = (callback) => {
+        setTimeout(() => {
+            callback('Time is error', undefined)
+        }, 2000)
+    }
+
+    getDataCallback((err, data) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log(data)
+        }
+    })
+    
+    // Promise
+
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            //resolve('This is the promise data')
+            reject('Error method')
+        }, 2000)
+    }) 
+
+    myPromise.then((data) => {
+        console.log(data)
+    }, (err) => {
+        console.log(err)
+    })
 
 **Currying:** Currying refers to the process of transforming a single function that takes a lot of arguments to multiple functions that take a subset of those arguments.  
 
