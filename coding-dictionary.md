@@ -1,8 +1,47 @@
+**Fetch API:** An alternative to XMLHttpRequest with Promises built in when doing HTTP requests. 
+
+It takes two arguments, the first one beeing the URL. What comes back from fetch() is actually a Promise.
+
+In fetch we don't have to worry about ready state, since it returns a Promise. If we get the Promise, we know it's ready.  
+
 **HTTP Request:** Hypertext Transfer Protocol is a request response protocol. It means that we, the developer, issue some sort of request. This goes of to some sort of third party server. That server does some work and gives us back a response: request <-> response.
 
 The request describes what we, the person making the request, hope to do.
 
 The response contains information about what was actually done.
+
+**Callback hell:** Deeply nested callbacks that is difficult to read and to manage. Should be replaced with (Promise)chaining. If we want to do two asynchronous things, using data from the first to start the process for the second, callback fall short. 
+
+**Promise chaining:** Very useful when we want to do two things in a row, both beeing Promise calls. We do this by returning the result of the Promise.
+
+Best technique:
+
+        getDataPromise(10).then((data) => {
+            return getDataPromise(data)
+        }).then((data) => { // Second chain
+            return getDataPromise(data)
+        }).then((data) => { // Third chain
+            console.log(data)
+        }).catch((err) => {
+        console.log(err)
+    })
+
+Not good technique:
+
+        getDataPromise(2).then((data) => {
+            getDataPromise(data).then((data) => {
+                console.log(`Promise data: ${data}`)
+            }, (err) => {
+                console.log(err)
+            })
+        }, (err) => {
+
+        })
+
+
+
+
+**Then:** A method that returns a Promise. It takes two arguments that are callback functions for the success and failure cases of the Promise.
 
 **Promises:** Alternative to callback.
 
