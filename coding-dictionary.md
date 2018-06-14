@@ -1,3 +1,38 @@
+**Async/Await:** Is the combination of two tools, the async function and the await operator. When used together, we get a new way to structure our promises, that makes the code a whole lot easier to work with. The await operator can only be used with async functions.
+
+When creating a new function, we can choose to create a function as an async function:
+
+    const processData = async () => {
+        return 12
+    }
+
+When calling an async function, we ALWAYS get a Promise. The Promise is resolved with the value that we return from the function:
+
+    Promise { 12 }
+
+We can use .then on the async function:
+
+    processData().then((data) => {
+        console.log('Data', data)
+    })
+
+With await we can get our Promises to look like synchronous code. It resolves one after the other. We don't have to use .then and it's a cleaner form of chaining.
+
+Await also throws our error for us, if the Promise is rejected.
+
+    const processData = async () => {
+        let data = await getDataPromise(2) // 2 * 2
+        data = await getDataPromise(data) // 4 * 2 Will only resolve if Promise above was not rejected.
+        data = await getDataPromise(data) // 8 * 2 Will only resolve if Promise above was not rejected.
+        return data // 16. Will only resolve if no Promise was rejected
+
+        /* getDataPromise(2).then((data) => {
+            console.log(data) // 4
+        }) */
+    }
+
+
+
 **Fetch API:** An alternative to XMLHttpRequest with Promises built in when doing HTTP requests. 
 
 It takes two arguments, the first one beeing the URL. What comes back from fetch() is actually a Promise.
