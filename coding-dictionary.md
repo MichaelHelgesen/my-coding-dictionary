@@ -1,3 +1,17 @@
+**classlist():** With classlist() we can manipulate class on a DOM element. It contains different methods like add, remove, toggle, contains. 
+
+**BEM (Block, element, modifier):** BEM is a naming convention for CSS. 
+
+* Block: house
+* Element: house__kitchen
+* Modifier: house--condo
+
+A block is a high level construct like header or content. A block of content. 
+
+Element is a piece of a block. So the name is the block name, followed by two underscores and the element name.
+
+Modifier indicates a different version of the an element.
+
 **Async/Await:** Is the combination of two tools, the async function and the await operator. When used together, we get a new way to structure our promises, that makes the code a whole lot easier to work with. The await operator can only be used with async functions.
 
 When creating a new function, we can choose to create a function as an async function:
