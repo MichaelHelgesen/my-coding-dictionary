@@ -177,7 +177,7 @@ When we execute something asynchronously, we start some sort of task, then we ca
 
 **Class syntax:** A different way to define things with object constructors. More organized and easier to read.
 
-**fromCharCode:** A string method to get the actuall letter from a key press. 
+**fromCharCode:** A string method to get the actual letter from a key press. 
 
 **keypressed / charCode:** Short for character code, and allows us to detect which character was pressed.
 
