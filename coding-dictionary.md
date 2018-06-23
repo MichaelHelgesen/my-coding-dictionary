@@ -536,7 +536,7 @@ There is also an argument passed to the callback function, often refered to as "
 
 Some event methods and properties
 * .preventDefault() = When combined with 'submit' it stops the default browser behaviour of refreshing the page and clearing the form fields.
-* .taget = Used so that we can get access to the data in the object that the event fires on. So we can property chain with for example .textContent, .value or .elements if it's a form.
+* .target = Used so that we can get access to the data in the object that the event fires on. So we can property chain with for example .textContent, .value or .elements if it's a form.
 * .elements = Gives us access to all the fields in a form that the event fires on. Chained with name of field.
 * .checked = A boolean to check if a checkbox is is checked or not. 
 
@@ -628,7 +628,7 @@ We are never calling the callback function directly, instead we pass it into the
 * .forEach() = Loop over an array and apply the same code to all items. It is a function and takes a single argument that is also a function. This is a callback function that comes with two arguments we can access: item and index.
 "item" refers to each individual item in the array. The second argument is the "index", which gives us the index of each individual item.
 * .indexOf() = search for an item. In the parentesis we pass in what we are looking for. Returns a number, which is the index. If there are severals of the same, it returns the first one. If it's not there, the number is -1. (Not a callback function)
-* .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the arg    uments item and index. If the match is true, it returns the index. Stops at first match. Returns -1 if nothing is found.
+* .findIndex = A callback. Works much like forEach. Gets called one time for each item, and it takes the arguments item and index. If the match is true, it returns the index. Stops at first match. Returns -1 if nothing is found.
 * .find() = A callback function that returns the actual item matching the search query and not just the index like .findIndex().
 * .reduce() = An alternative to forEach() if you want to add values together. It applies a function against an accumulator for each item in the array. It takes four arguments: accumulator, currentValue, currentIndex and array
 
