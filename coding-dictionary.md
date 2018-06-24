@@ -684,7 +684,7 @@ Inside of our methods, we can use the "this" keyword. "This" references the obje
 
 See "Methodes (object)".
 
-**Methods (object):** We can also add functions as property values. So a method is an object property, whos value is a function (Functions defined on objects).
+**Methods (object):** We can also add functions as property values. So a method is   an object property, whos value is a function (Functions defined on objects).
 
     const car = {
     color: 'Red',
